@@ -1,0 +1,10 @@
+#lang racket
+(define (third arg)
+    (if (integer? (log arg 2))
+        #t
+        #f))
+
+(third 8)
+(third 9)
+(third 1)
+(third 0.5)

@@ -1,0 +1,13 @@
+#lang racket
+(define arg1 9)
+(define arg2 (list 1 2 3 4))
+(define arg3 "asd")
+(define (second arg)
+    (if (number? arg)
+        (sqrt arg)
+        (if (list? arg)
+            (last arg)
+            arg)))
+(second arg1)
+(second arg2)
+(second arg3)

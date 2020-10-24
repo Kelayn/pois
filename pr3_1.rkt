@@ -1,0 +1,11 @@
+#lang racket
+(define l1 (list 1 2 3 4 5 6 ))
+(define l2 (list 0.2 2 3 4 6 1))
+
+(define (first l1 l2)
+    (if (exact-positive-integer? (car l1))
+        l2
+        (cons ( car l1 ) ( cdr l2 ))))
+
+(first l1 l2)
+(first l2 l1)
