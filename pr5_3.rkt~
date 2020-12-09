@@ -1,0 +1,4 @@
+#lang racket
+
+(define (calc_string str)
+  (eval (str))))

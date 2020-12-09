@@ -1,0 +1,17 @@
+#lang racket
+
+(define (bubble-sort lst)
+  (if (> (length lst) 1)
+  (if (> (car lst) (cadr lst))
+      (cons (car lst) (bubble-sort (cons (cadr lst) (cddr lst))))
+      (cons (cadr lst) (bubble-sort (cons (car lst) (cddr lst))))
+      )
+  lst
+  ))
+
+(define (bubble lst)
+  (if (> (length lst) 1)
+      (bubble-sort (cons (car lst) (bubble (cdr lst))))
+      lst
+      ))
+
